@@ -1,53 +1,134 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
+    <meta charset="UTF-8">
     <title>Dra. Keicyane Ferreira</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      /* Add some styling to the website */
+      :root {
+        --primary: #234567;
+        --secondary: #F6F7FB;
+        --accent: #4DA3FF;
+        --text: #222;
+        --border-radius: 12px;
+      }
+
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: var(--secondary);
+        color: var(--text);
         margin: 0;
         padding: 0;
       }
       header {
-        background-color: #333;
+        background: linear-gradient(90deg, var(--primary) 60%, #3969a7 100%);
         color: white;
-        padding: 20px;
+        padding: 40px 20px 30px 20px;
         text-align: center;
+        box-shadow: 0 2px 12px rgba(30,50,100,0.10);
       }
       header h1 {
         margin: 0;
+        font-size: 2.6rem;
+        letter-spacing: 1px;
       }
       nav {
-        background-color: #eee;
-        padding: 20px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(30,50,100,0.07);
       }
       nav ul {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
+        justify-content: center;
+        gap: 28px;
       }
       nav li {
-        margin: 0 10px;
+        margin: 0;
       }
       nav a {
-        color: #333;
+        color: var(--primary);
         text-decoration: none;
+        font-weight: 600;
+        padding: 12px 18px;
+        border-radius: var(--border-radius);
+        transition: background 0.2s, color 0.2s;
       }
       nav a:hover {
-        color: #999;
+        background: var(--accent);
+        color: #fff;
       }
       main {
-        padding: 20px;
+        max-width: 700px;
+        margin: 36px auto 0 auto;
+        padding: 24px;
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 18px rgba(30,50,100,0.06);
       }
       section {
-        margin: 20px 0;
+        margin: 36px 0;
       }
-      footer {
-        background-color: #333;
+      h2 {
+        color: var(--primary);
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+      }
+      ul {
+        padding-left: 21px;
+      }
+      li {
+        margin-bottom: 7px;
+        font-size: 1.05rem;
+      }
+      #contact p {
+        margin: 6px 0;
+        font-size: 1.06rem;
+      }
+      /* Add a card effect for sections */
+      section {
+        padding: 18px 20px;
+        background: var(--secondary);
+        border-radius: var(--border-radius);
+        box-shadow: 0 1px 5px rgba(30,50,100,0.03);
+      }
+      /* Responsive adjustments */
+      @media (max-width: 800px) {
+        main {
+          padding: 12px;
+        }
+        header {
+          padding: 24px 8px 18px 8px;
+        }
+      }
+      @media (max-width: 500px) {
+        header h1 {
+          font-size: 1.3rem;
+        }
+        nav ul {
+          gap: 10px;
+        }
+        section {
+          padding: 12px 7px;
+        }
+      }
+      /* Button style for contact (optional) */
+      .contact-btn {
+        display: inline-block;
+        margin-top: 10px;
+        background: var(--accent);
         color: white;
-        padding: 20px;
-        text-align: center;
+        padding: 10px 22px;
+        border: none;
+        border-radius: 24px;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .contact-btn:hover {
+        background: var(--primary);
       }
     </style>
   </head>
@@ -58,18 +139,20 @@
     <nav>
       <ul>
         <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
     <main>
       <section id="about">
         <h2>Sobre</h2>
-        <p>Bem vindos ao meu site! Sou advogada credenciada especializada em divórcios, com experiência nas áreas cível, trabalhista e empresarial, me dedico fielmente aos meus clientes e providencio o serviço jurídico de maior qualidade em busca dos melhores resultados. 
-		<p>Welcome to my lawyer website! I am a licensed attorney with over 10 years of experience in civil, worker and company lawsuits. I am dedicated to providing my clients with top-quality legal representation and strive to achieve the best possible outcome in every case.</p>
+        <p>Bem vindos ao meu site! Sou advogada credenciada especializada em divórcios, com experiência nas áreas cível, trabalhista e empresarial, me dedico fielmente aos meus clientes e providencio o serviço jurídico de maior qualidade em busca dos melhores resultados. </p>
+        <p>Welcome to my lawyer website! I am a licensed attorney with over 10 years of experience in civil, worker and company lawsuits. I am dedicated to providing my clients with top-quality legal representation and strive to achieve the best possible outcome in every case.</p>
       </section>
       <section id="services">
         <h2>Serviços</h2>
         <ul>
-		  <li>Direito de Família
+          <li>Direito de Família</li>
           <li>Direito do Consumidor</li>
           <li>Direito Civil</li>
           <li>Direito do Trânsito</li>
@@ -77,8 +160,13 @@
       </section>
       <section id="contact">
         <h2>Contato</h2>
-        <p>Telefone: (+55)(11) 9 7094-6270</p>
-        <p>Email: keicyaneferreira@adv.oabsp.org.br</p>
+        <p><strong>Telefone:</strong> <a href="tel:+5511970946270" style="color:inherit;text-decoration:underline;">(+55)(11) 9 7094-6270</a></p>
+        <p><strong>Email:</strong> <a href="mailto:keicyaneferreira@adv.oabsp.org.br" style="color:inherit;text-decoration:underline;">keicyaneferreira@adv.oabsp.org.br</a></p>
+        <a class="contact-btn" href="mailto:keicyaneferreira@adv.oabsp.org.br">Enviar Email</a>
       </section>
     </main>
-   
+    <footer>
+      &copy; 2025 Dra. Keicyane Ferreira. Todos os direitos reservados.
+    </footer>
+  </body>
+</html>
