@@ -169,7 +169,7 @@
       </section>
       <section id="contact">
         <h2>Contato</h2>
-        <p><strong>Telefone:</strong> <a href="tel:+5511970946270" style="color:inherit;text-decoration:underline;">(+55)(11) 9 7094-6270 (whatsapp)</a></p>
+        <p><strong>Telefone:</strong> <a href="tel:+5511970946270" style="color:inherit;text-decoration:underline;" onclick="return gtag_report_conversion('tel:+5511970946270');">(+55)(11) 9 7094-6270 (whatsapp)</a>
         <p><strong>Email:</strong> <a href="mailto:keicyaneferreira@adv.oabsp.org.br" style="color:inherit;text-decoration:underline;">keicyaneferreira@adv.oabsp.org.br</a></p>
         <a class="contact-btn" href="mailto:keicyaneferreira@adv.oabsp.org.br">Enviar Email</a>
       </section>
@@ -177,5 +177,19 @@
     <footer>
       &copy; 2025 Dra. Keicyane Ferreira. Todos os direitos reservados.
     </footer>
+	<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17190566490/uHw4COC56d0aENr0jIVA',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   </body>
 </html>
